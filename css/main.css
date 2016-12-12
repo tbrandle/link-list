@@ -1,0 +1,150 @@
+/*******************************
+          GENERAL
+*******************************/
+
+body, button, input {
+  font-family: 'Open Sans', sans-serif;
+}
+
+section{
+  display: inline-block;
+  margin: auto;
+  height: 49%%;
+  width: 100%;
+}
+
+*:focus {
+  outline: none;
+}
+
+a:hover, button:hover {
+  cursor: pointer;
+}
+
+/*******************************
+          HEADER
+*******************************/
+
+#logo {
+width: 65px;
+height: 100%;
+}
+
+h1 {
+  display: inline-block;
+  margin: auto;
+}
+
+.logo-div {
+  text-align: center;
+  margin: 30px ;
+  color: #fff;
+}
+
+/*******************************
+       INPUT SECTION
+*******************************/
+
+
+#input-section{
+  background-color: #455A64;
+}
+
+/**** inputs/buttons ****/
+
+#enter-btn, input {
+  display: block;
+  margin: 24px auto;
+}
+
+input {
+  font-size: 2em;
+  border: 2px #CFD8DC solid;
+  padding: 6px 6px;
+  width: 81%;
+}
+
+#enter-btn{
+  border: none;
+  color: #fff;
+  background-color: #FFC107;
+  width: 85%;
+  padding: 12px;
+  font-weight: 800;
+}
+
+/*******************************
+       BOOKMARK SECTION
+*******************************/
+
+h2 {
+  margin: 0;
+}
+
+#web-list-section {
+  background-color: #CFD8DC;
+  height: 67vh;
+}
+
+#article {
+  background-color: #fff;
+  border: 2px #455A64 solid;
+  margin: 15px;
+  padding: 6px 6px;
+}
+
+#article div {
+  margin: 5px;
+  padding-left: 4px;
+}
+
+.article-div2 {
+  border-top: 2px #CFD8DC solid;
+  border-bottom: 2px #CFD8DC solid;
+  padding: 10px;
+}
+
+ /**** links/buttons ****/
+
+ .article-div2 a {
+   color: #607d8b;
+   text-decoration: none;
+   border-bottom: 2px #f2f4f4 solid;
+ }
+
+ .article-div3 button {
+   color: #455a64;
+   border: none;
+   border-bottom: 2px #f2f4f4 solid;
+   background-color: transparent;
+ }
+
+ .delete-btn {
+   float: right;
+ }
+
+ #article a:hover,
+ #article button:hover{
+   color: #455a64;
+   border-bottom: 2px #ffc107 solid;
+   font-weight: 800;
+ }
+
+/*******************************
+       MEDIA QUERIES
+*******************************/
+@media screen and (min-width:770px) {
+
+  section{
+    display: inline;
+    margin: auto;
+    height: 100vh;
+    width: 50%;
+  }
+  #input-section{
+    float: left;
+  }
+  #web-list-section {
+    float: right;
+  }
+}
