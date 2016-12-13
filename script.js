@@ -10,10 +10,8 @@ $('#enter-btn').on('click', function (){
           <div class="article-div2">
             <a href="">${$url}</a>
           </div>
-          <div>
-            <button class="read-btn" type="button" name="read">Read</button>
-            <button class="delete-btn" type="button" name="delete">Delete</button>
-          </div>
+          <button class="read-btn" type="button" name="read">Read</button>
+          <button class="delete-btn" type="button" name="delete">Delete</button>
         </article>`)
   }
 )
@@ -22,4 +20,9 @@ $('#enter-btn').on('click', function (){
 $('#web-list-section').on('click','.read-btn', function() { //I needed to target the section id that was already on the page and then add add a target
   $(this).toggleClass('visited-btn');
   $(this).parentsUntil($('#article')).toggleClass('visited-article');
+})
+
+//remove button
+$('#web-list-section').on('click','.delete-btn', function() {
+  $(this).parent().remove();
 })
