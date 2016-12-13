@@ -5,11 +5,14 @@
 body, button, input {
   font-family: 'Open Sans', sans-serif;
 }
+body {
+  display: flex;
+  flex-direction: column;
+}
 
 section{
   display: inline-block;
   margin: auto;
-  height: 49%%;
   width: 100%;
 }
 
@@ -26,8 +29,8 @@ a:hover, button:hover {
 *******************************/
 
 #logo {
-width: 65px;
-height: 100%;
+  width: 65px;
+  height: 100%;
 }
 
 h1 {
@@ -50,6 +53,7 @@ h1 {
   background-color: #455A64;
   position: static;
 }
+
 
 /**** inputs/buttons ****/
 
@@ -88,7 +92,6 @@ h2 {
 
 #web-list-section {
   background-color: #CFD8DC;
-  height: 67vh;
   overflow: scroll;
 }
 
@@ -150,6 +153,11 @@ h2 {
   background-color: #f2f4f4
 }
 
+.error {
+  color: red;
+  text-align: center;
+}
+
 /*******************************
        MEDIA QUERIES
 *******************************/
@@ -161,10 +169,20 @@ h2 {
     height: 100vh;
     width: 50%;
   }
-  #input-section{
-    float: left;
+
+  body {
+    display: flex;
+    flex-direction: row;
   }
-  #web-list-section {
-    float: right;
+
+  #input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .input-div{
+    width: 100%;
   }
 }

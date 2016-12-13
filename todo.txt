@@ -1,12 +1,11 @@
 To-do:
 
   jQuery:
+  - figure out toggle class for article background color...it will change for the read-btn, but not for anything else:
+        - #article: #f2f4f4
+        - URL underline: #CFD8DC
 
 
 
   CSS:
-  - visited property:
-        - article buttons: #F05A28
-        - #article: #f2f4f4
-        - URL underline: #CFD8DC
-  -
+  - learn flexbox to make the two column layout 100% height.
