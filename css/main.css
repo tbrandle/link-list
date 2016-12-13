@@ -73,6 +73,10 @@ input {
   font-weight: 800;
 }
 
+#enter-btn:hover {
+  background-color: #ffd773;
+}
+
 /*******************************
        BOOKMARK SECTION
 *******************************/
@@ -112,7 +116,7 @@ h2 {
    border-bottom: 2px #f2f4f4 solid;
  }
 
- .article-div3 button {
+.read-btn, .delete-btn {
    color: #455a64;
    border: none;
    border-bottom: 2px #f2f4f4 solid;
@@ -123,12 +127,25 @@ h2 {
    float: right;
  }
 
- #article a:hover,
- #article button:hover{
+.article-div2 a:hover,
+.read-btn:hover, .delete-btn:hover{
    color: #455a64;
    border-bottom: 2px #ffc107 solid;
    font-weight: 800;
  }
+
+ /*******************************
+       Toggle Classes
+ *******************************/
+
+.visited-btn {
+  color: #F05A28;
+  font-weight: 800;
+}
+
+.visited-article {
+  background-color: #f2f4f4
+}
 
 /*******************************
        MEDIA QUERIES

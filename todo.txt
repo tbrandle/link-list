@@ -1,0 +1,12 @@
+To-do:
+
+  jQuery:
+
+
+
+  CSS:
+  - visited property:
+        - article buttons: #F05A28
+        - #article: #f2f4f4
+        - URL underline: #CFD8DC
+  -
