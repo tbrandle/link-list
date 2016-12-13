@@ -19,8 +19,8 @@ $('#enter-btn').on('click', function (){
 //add toggleClass to the visited
 $('#web-list-section').on('click','.read-btn', function() { //I needed to target the section id that was already on the page and then add add a target
   $(this).toggleClass('visited-btn');
-  $(this).parentsUntil($('#article')).toggleClass('visited-article');
 })
+
 
 //remove button
 $('#web-list-section').on('click','.delete-btn', function() {

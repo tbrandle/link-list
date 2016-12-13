@@ -48,6 +48,7 @@ h1 {
 
 #input-section{
   background-color: #455A64;
+  position: static;
 }
 
 /**** inputs/buttons ****/
@@ -88,6 +89,7 @@ h2 {
 #web-list-section {
   background-color: #CFD8DC;
   height: 67vh;
+  overflow: scroll;
 }
 
 #article {
@@ -134,7 +136,7 @@ h2 {
    font-weight: 800;
  }
 
-<<<<<<< HEAD
+
  /*******************************
        Toggle Classes
  *******************************/
@@ -147,8 +149,6 @@ h2 {
 .visited-article {
   background-color: #f2f4f4
 }
-=======
->>>>>>> master
 
 /*******************************
        MEDIA QUERIES
