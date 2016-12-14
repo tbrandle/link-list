@@ -99,6 +99,7 @@ input {
 .enter-btn:hover {
   background-color: #ffd773;
 }
+
 .enter-btn:disabled {
   background-color: #ffd773;
 }
@@ -107,17 +108,18 @@ input {
   color: grey;
   border-color: grey;
 }
+
 /*******************************
        BOOKMARK SECTION
 *******************************/
 
-h2 {
-  margin: 0;
-}
-
 #web-list-section {
   background-color: #CFD8DC;
   overflow: scroll;
+}
+
+h2 {
+  margin: 0;
 }
 
 .article {
@@ -163,7 +165,6 @@ h2 {
    border-bottom: 2px #ffc107 solid;
    font-weight: 800;
  }
-
 
  /*******************************
        Toggle Classes
