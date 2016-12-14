@@ -51,12 +51,11 @@ $('#web-list-section').on('click','.delete-btn', function() {
 
 var articleCount = 0
 var readCount = 0
-// var unreadCount = 0
 
-function unreadFn() {
-  unreadCount = articleCount - readCount
-  $('.unread').text('Unread: '+ unreadCount)
-}
+// function unreadFn() {
+//   unreadCount = articleCount - readCount
+//   $('.unread').text('Unread: '+ unreadCount)
+// }
 
 
 function articleFn(diff) {
@@ -66,6 +65,8 @@ function articleFn(diff) {
     articleCount --;
   }
   $('.saved').text('Saved: '+ articleCount)
+  unreadCount = articleCount - readCount
+  $('.unread').text('Unread: '+ unreadCount)
   console.log(articleCount);
 }
 
@@ -76,12 +77,14 @@ function readFn(e) {
     readCount --;
   }
   $('.read').text('Read: '+ readCount)
+  unreadCount = articleCount - readCount
+  $('.unread').text('Unread: '+ unreadCount)
   console.log(readCount);
 }
 
 $('.enter-btn').on('click', function(){
   articleFn('+');
-  unreadFn();
+  // unreadFn();
 })
 
 $('#web-list-section').on('click', '.delete-btn', function(e){
@@ -90,10 +93,10 @@ $('#web-list-section').on('click', '.delete-btn', function(e){
   }
   $('.read').text('Read: '+ readCount);
   articleFn('-');
-  unreadFn();
+  // unreadFn();
 })
 
 $('#web-list-section').on('click', '.read-btn', function(e) {
   readFn(e);
-  unreadFn();
+  // unreadFn();
 })
