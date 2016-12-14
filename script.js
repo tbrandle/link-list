@@ -51,7 +51,12 @@ $('#web-list-section').on('click','.delete-btn', function() {
 
 var articleCount = 0
 var readCount = 0
-// var unreadCount = articleCount - readCount
+// var unreadCount = 0
+
+function unreadFn() {
+  unreadCount = articleCount - readCount
+  $('.unread').text('Unread: '+ unreadCount)
+}
 
 
 function articleFn(diff) {
@@ -75,17 +80,20 @@ function readFn(e) {
 }
 
 $('.enter-btn').on('click', function(){
-  articleFn('+')
+  articleFn('+');
+  unreadFn();
 })
 
-$('#web-list-section').on('click', '.delete-btn', function(){
+$('#web-list-section').on('click', '.delete-btn', function(e){
   if ($(this).siblings().hasClass('visited-btn')) {
     readCount --;
   }
-  $('.read').text('Read: '+ readCount)
-  articleFn('-')
+  $('.read').text('Read: '+ readCount);
+  articleFn('-');
+  unreadFn();
 })
 
 $('#web-list-section').on('click', '.read-btn', function(e) {
   readFn(e);
+  unreadFn();
 })
