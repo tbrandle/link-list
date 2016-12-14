@@ -1,5 +1,6 @@
 To-do:
 
   jQuery:
+    The user should not to be able to add a URL that isn’t valid.
 
   CSS:

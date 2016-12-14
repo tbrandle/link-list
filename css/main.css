@@ -174,13 +174,10 @@ h2 {
   background-color: #ffd773;
 }
 
-.article-read {
-  background-color: #f2f4f4;
-}
-
 /*******************************
        MEDIA QUERIES
 *******************************/
+
 @media screen and (min-width:770px) {
 
   section{
