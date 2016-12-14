@@ -8,6 +8,7 @@ body, button, input {
 body {
   display: flex;
   flex-direction: column;
+  background-color: #cfd8dc;
 }
 
 section{
@@ -57,7 +58,7 @@ h1 {
 
 /**** inputs/buttons ****/
 
-#enter-btn, input {
+.enter-btn, input {
   display: block;
   margin: 24px auto;
 }
@@ -69,7 +70,9 @@ input {
   width: 81%;
 }
 
-#enter-btn{
+
+
+.enter-btn{
   border: none;
   color: #fff;
   background-color: #FFC107;
@@ -78,7 +81,7 @@ input {
   font-weight: 800;
 }
 
-#enter-btn:hover {
+.enter-btn:hover {
   background-color: #ffd773;
 }
 
@@ -95,14 +98,14 @@ h2 {
   overflow: scroll;
 }
 
-#article {
+.article {
   background-color: #fff;
   border: 2px #455A64 solid;
   margin: 15px;
   padding: 6px 6px;
 }
 
-#article div {
+.article div {
   margin: 5px;
   padding-left: 4px;
 }
@@ -156,6 +159,14 @@ h2 {
 .error {
   color: red;
   text-align: center;
+}
+
+.enter-btn:disabled {
+  background-color: #ffd773;
+}
+
+.article-read {
+  background-color: #f2f4f4;
 }
 
 /*******************************
