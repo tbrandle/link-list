@@ -36,15 +36,21 @@ $('.enter-btn').on('click', function (){
   }
 )
 
-$('.enter-btn').on('click', function (){
+//bookmark count
+$('body').on('click', 'button', function (){
   var articleCount = $('article').length;
-  $('#web-list-section').append(`<p>${articleCount}</p>`)
+  $('.bm-counter').text('Saved bookmarks: '+ articleCount)
+  console.log('hi')
 })
 
+$('#web-list-section').on('click','.delete-btn', function(){
+  var articleCount = $('article').length - 1;
+  $('.bm-counter').text('Saved bookmarks: '+ articleCount)
+  console.log('hi')
+})
 
 //add toggleClass to the visited
 $('#web-list-section').on('click','.read-btn', function() { //I needed to target the section id that was already on the page and then add add a target
-  console.log($(this).parent());
   $(this).toggleClass('visited-btn');
   $(this).parent().toggleClass('article-read');
 })
