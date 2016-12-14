@@ -55,9 +55,14 @@ h1 {
   position: static;
 }
  .bm-counter{
+   display: inline-block;
    color: #f2f4f4;
    margin: 20px auto;
    text-align: center;
+ }
+
+ .container{
+   display: flex;
  }
 
 /**** inputs/buttons ****/

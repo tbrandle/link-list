@@ -36,19 +36,6 @@ $('.enter-btn').on('click', function (){
   }
 )
 
-//bookmark count
-$('body').on('click', 'button', function (){
-  var articleCount = $('article').length;
-  $('.bm-counter').text('Saved bookmarks: '+ articleCount)
-  console.log('hi')
-})
-
-$('#web-list-section').on('click','.delete-btn', function(){
-  var articleCount = $('article').length - 1;
-  $('.bm-counter').text('Saved bookmarks: '+ articleCount)
-  console.log('hi')
-})
-
 //add toggleClass to the visited
 $('#web-list-section').on('click','.read-btn', function() { //I needed to target the section id that was already on the page and then add add a target
   $(this).toggleClass('visited-btn');
@@ -58,4 +45,47 @@ $('#web-list-section').on('click','.read-btn', function() { //I needed to target
 //remove button
 $('#web-list-section').on('click','.delete-btn', function() {
   $(this).parent().remove();
+})
+
+
+
+var articleCount = 0
+var readCount = 0
+// var unreadCount = articleCount - readCount
+
+
+function articleFn(diff) {
+  if (diff === '+') {
+    articleCount ++;
+  } else {
+    articleCount --;
+  }
+  $('.saved').text('Saved: '+ articleCount)
+  console.log(articleCount);
+}
+
+function readFn(e) {
+  if ($(e.target).hasClass('visited-btn')) {
+    readCount ++;
+  } else {
+    readCount --;
+  }
+  $('.read').text('Read: '+ readCount)
+  console.log(readCount);
+}
+
+$('.enter-btn').on('click', function(){
+  articleFn('+')
+})
+
+$('#web-list-section').on('click', '.delete-btn', function(){
+  if ($(this).siblings().hasClass('visited-btn')) {
+    readCount --;
+  }
+  $('.read').text('Read: '+ readCount)
+  articleFn('-')
+})
+
+$('#web-list-section').on('click', '.read-btn', function(e) {
+  readFn(e);
 })
