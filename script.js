@@ -1,6 +1,6 @@
 //disable button
 $('.enter-btn').attr('disabled', 'disabled');
-$('.enter-btn').toggleClass('disable-btn')
+$('.clear-btn').attr('disabled', 'disabled')
 
 //helper functions
 function counter() {
@@ -25,10 +25,10 @@ function validateUrl() {
   }
 }
 
-//event listeners
-$('.clear-bm-btn').on('click', function () {
+$('.clear-btn').on('click', function () {
   $('.visited-btn').parent().remove();
   counter()
+  $('.clear-btn').attr('disabled', 'disabled')
 })
 
 $('input').keyup(function(){
@@ -65,19 +65,17 @@ $('.enter-btn').on('click', function (){
   }
 )
 
-//add toggleClass to the visited
-$('#web-list-section').on('click','.read-btn', function() { //I needed to target the section id that was already on the page and then add add a target
+$('#web-list-section').on('click','.read-btn', function() {
   $(this).toggleClass('visited-btn');
   $(this).parent().toggleClass('visited-article');
+  $('.clear-btn').removeAttr('disabled', 'disabled')
 })
 
-//remove button
 $('#web-list-section').on('click','.delete-btn', function() {
   $(this).parent().remove();
 })
 
 //bookmark counters
-
 $('.enter-btn').on('click', function(){
   counter()
   clearInput()

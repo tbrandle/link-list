@@ -49,15 +49,15 @@ h1 {
        INPUT SECTION
 *******************************/
 
-
 #input-section{
-  background-color: #455A64;
   position: static;
+  background-color: #455A64;
 }
+
  .bm-counter{
    display: inline-block;
    color: #f2f4f4;
-   margin: 20px auto;
+   margin: 3px auto;
    text-align: center;
  }
 
@@ -67,7 +67,7 @@ h1 {
 
 /**** inputs/buttons ****/
 
-.enter-btn, input {
+.enter-btn, input, .clear-btn  {
   display: block;
   margin: 24px auto;
 }
@@ -79,7 +79,13 @@ input {
   width: 81%;
 }
 
-
+.clear-btn{
+  background-color: transparent;
+  color: lightgrey;
+  border-radius: 25px;
+  border: 2px lightgrey solid;
+  padding: 3px 14px;
+}
 
 .enter-btn{
   border: none;
@@ -93,7 +99,14 @@ input {
 .enter-btn:hover {
   background-color: #ffd773;
 }
+.enter-btn:disabled {
+  background-color: #ffd773;
+}
 
+.clear-btn:disabled{
+  color: grey;
+  border-color: grey;
+}
 /*******************************
        BOOKMARK SECTION
 *******************************/
@@ -156,7 +169,7 @@ h2 {
        Toggle Classes
  *******************************/
 
-.visited-btn {
+.visited-btn, .visited-btn:hover {
   color: #F05A28;
   font-weight: 800;
 }
@@ -168,10 +181,6 @@ h2 {
 .error {
   color: red;
   text-align: center;
-}
-
-.enter-btn:disabled {
-  background-color: #ffd773;
 }
 
 /*******************************
@@ -190,6 +199,14 @@ h2 {
   body {
     display: flex;
     flex-direction: row;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  #logo {
+    width: 67px;
   }
 
   #input-section {
